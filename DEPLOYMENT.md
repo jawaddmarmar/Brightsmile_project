@@ -40,3 +40,22 @@ $doctorPass = '123456';
 ## Google indexing
 
 After the site is online, add the final website URL in Google Search Console and request indexing.
+
+## GitHub Actions deployment
+
+This repository includes `.github/workflows/deploy.yml`.
+
+Add these GitHub repository secrets before using it:
+
+- `FTP_SERVER`
+- `FTP_USERNAME`
+- `FTP_PASSWORD`
+- `FTP_SERVER_DIR`
+
+For InfinityFree, `FTP_SERVER_DIR` is usually:
+
+```text
+/htdocs/
+```
+
+Do not commit `config.local.php`. Create it directly on the server with the real database credentials.
